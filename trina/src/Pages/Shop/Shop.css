@@ -1,0 +1,14 @@
+.list-shop{
+    flex: 1;
+    background-color:  rgba(128, 111, 151, 0.621);
+    padding: 20px;
+    border-radius: 3px;
+    top: 80px;
+    position: sticky;
+    height: 82vh;
+}
+
+.list-shop-result{
+    flex:3;
+    height: max-content;
+}

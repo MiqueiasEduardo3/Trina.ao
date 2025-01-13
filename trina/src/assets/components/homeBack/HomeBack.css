@@ -1,0 +1,23 @@
+.hero {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: slideImages 10s infinite;
+}
+
+@keyframes slideImages {
+  0% {
+    background-image: url(../../../img/hero.jpg);
+  }
+  50% {
+    background-image: url(../../../img/hero3.jpg);
+  }
+  100% {
+    background-image: url(../../../img/hero.jpg);
+  }
+}
+
+.title {
+  font-style: italic;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
