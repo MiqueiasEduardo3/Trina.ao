@@ -66,7 +66,7 @@ import { useNavigate } from 'react-router-dom';
           isHeaderFixed ? 'fixed-header' : ''
         } z-20`}
       >
-        <div className="flex justify-between w-11/12 items-center">
+        <div className="flex justify-between w-[95%] items-center">
           <a className="text-xl text-red-900" href="/"> Trina .</a>
 
           <div className="flex items-center gap-4 lg:hidden">
