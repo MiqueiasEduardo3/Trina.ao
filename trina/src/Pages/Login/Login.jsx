@@ -16,12 +16,14 @@ const Login = () => {
         <>
             <div className='bg w-full h-screen
              items-center justify-center flex'>
-                 <div className='bg-white w-[30%] h-[75%]
+                 <div className='bg-white w-[95%] sm:w-[50%] md:w-[30%] h-max 
                   flex-col items-center justify-center rounded-md'>
 
                     <h1 className='flex items-center justify-center
-                     p-3 text-lg font-extrabold'>Conecta-se</h1>
-                     <div className='w-[80px] h-[8px] bg-red-700 rounded-lg items-center justify-center ml-40'></div>
+                     p-3 mt-3 text-lg font-extrabold'>Conecta-se</h1>
+                     <div className='flex items-center justify-center'>
+                       <div className='w-[80px] h-[8px] bg-red-700 rounded-lg'></div>
+                     </div>
 
                     <div className="flex flex-col mt-10 gap-6">
                         <div className="flex items-center w-[300px] h-[60px] rounded-md bg-zinc-300">
@@ -59,7 +61,7 @@ const Login = () => {
                         </div>
 
                         <span className="flex items-center w-[300px] h-[50px] rounded-md bg-zinc-300
-                         hover:bg-zinc-400 duration-300 text-sm cursor-pointer gap-2">
+                         hover:bg-zinc-400 duration-300 text-sm cursor-pointer gap-2 mb-7">
                          <img className='w-[22px] rounded-md' src={google}/>
                          Iniciar sessão com o google
                          </span>

@@ -21,7 +21,7 @@ const OtherProductsData = ({ img, nomeProduto, percentagem, detalhesProduto, pre
         <img
           src={img}
           alt="No image"
-          className="mx-auto h-[290px] w-[320px] md:h-[220px] md:w-[290px] lg:h-[320px] lg:w-[320px] sm:transition sm:duration-700 sm:hover:skew-x-2 sm:hover:scale-110"
+          className="mx-auto h-[300px] w-[320px] md:h-[220px] md:w-[290px] lg:h-[320px] lg:w-[320px] sm:transition sm:duration-700 sm:hover:skew-x-2 sm:hover:scale-110"
         />
         <span className="text-sm absolute top-5 flex items-center gap-2 text-red-700 rounded-sm pr-1 pl-1 bg-white">
           SUPER<span className="font-bold">PREÇO</span>
@@ -44,8 +44,7 @@ const OtherProductsData = ({ img, nomeProduto, percentagem, detalhesProduto, pre
           </div>
           <span
             onClick={handleProducts}
-            className="cursor-pointer py-2 px-7 md:py-2 mg:px-5 lg:py-2 lg:px-8 bg-black text-xs md:text-sm lg:text-sm text-white rounded-sm"
-          >
+            className="cursor-pointer py-2 px-7 md:py-2 mg:px-5 lg:py-2 lg:px-8 bg-black text-xs md:text-sm lg:text-sm text-white rounded-sm">
             Confira
           </span>
         </div>

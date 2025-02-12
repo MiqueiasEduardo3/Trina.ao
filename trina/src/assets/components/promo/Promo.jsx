@@ -104,7 +104,7 @@ const Promo = () =>{
 
 
           <section className="flex items-center justify-center my-6">   
-            <div className=" w-11/12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-14 md:gap-8 lg:gap-4">
+            <div className=" w-11/12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-8 lg:gap-4">
                 {PromoData.map((item, index) =>(
                   <PromoDataCard 
                   key={index}

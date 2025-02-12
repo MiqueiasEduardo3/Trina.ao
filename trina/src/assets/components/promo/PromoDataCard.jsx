@@ -23,7 +23,7 @@ const PromoDataCard = ({ img, nomeProduto, percentagem, detalhesProduto1, detalh
         <img
           src={img}
           alt="No image"
-          className="mx-auto h-[300px] w-[360px] md:h-[220px] md:w-[290px] lg:h-[320px]
+          className="mx-auto h-[320px] w-[360px] md:h-[220px] md:w-[290px] lg:h-[320px]
            lg:w-[320px] sm:transition sm:duration-700 sm:hover:skew-x-2 sm:hover:scale-110"
         />
         <span className="text-sm absolute top-5 flex items-center gap-2 text-red-700

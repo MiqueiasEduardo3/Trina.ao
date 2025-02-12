@@ -26,7 +26,7 @@ const BestProdCard = ({
         <img
           src={currentImg}
           alt="No image"
-          className="mx-auto h-[355px] w-[340px] md:h-[220px] md:w-[210px] lg:h-[350px] lg:w-[400px] 
+          className="mx-auto h-[360px] w-[340px] md:h-[220px] md:w-[210px] lg:h-[350px] lg:w-[400px] 
           cursor-pointer rounded-sm sm:transition sm:duration-700 sm:hover:skew-x-2 sm:hover:scale-110"
         />
       </div>

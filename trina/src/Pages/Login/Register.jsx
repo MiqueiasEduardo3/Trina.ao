@@ -2,7 +2,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Login.css'
 import { faLock } from '@fortawesome/free-solid-svg-icons/faLock';
 import { faEnvelope, faUserLarge } from '@fortawesome/free-solid-svg-icons';
-import google from '../../../src/img/google.png';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -18,12 +17,14 @@ const Register = () => {
         <>
             <div className='bg w-full h-screen
              items-center justify-center flex'>
-                 <div className='bg-white w-[30%] h-[75%]
+                 <div className='bg-white w-[95%] sm:w-[30%] h-max 
                   flex-col items-center justify-center rounded-md'>
 
                     <h1 className='flex items-center justify-center
-                     p-3 text-lg font-extrabold'>Cadastra-se</h1>
-                     <div className='w-[80px] h-[8px] bg-red-700 rounded-lg items-center justify-center ml-40'></div>
+                     p-3 mt-3 text-lg font-extrabold'>Cadastra-se</h1>
+                    <div className='flex items-center justify-center'>
+                       <div className='w-[80px] h-[8px] bg-red-700 rounded-lg'></div>
+                     </div>
 
                     <div className="flex flex-col mt-10 gap-6">
                     <div className="flex items-center w-[300px] h-[60px] rounded-md bg-zinc-300">
@@ -61,7 +62,7 @@ const Register = () => {
                              Registar
                             </button>
 
-                        <div className="-mt-2 flex flex-col gap-1">
+                        <div className="-mt-2 flex flex-col gap-1 mb-6">
                             <span onClick={handleLogin} className='text-sm cursor-pointer'>Já tens uma conta?
                                 <span className='font-bold'>Iniciar sessão</span>
                             </span>

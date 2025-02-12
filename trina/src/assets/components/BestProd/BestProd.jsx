@@ -55,7 +55,7 @@ const BestProd = () =>{
         <div data-aos="fade-up" className='h-full bg-white items-center flex justify-center mt-10 mb-10'>
           <section  className= 'w-10/12 items-center flex-col justify-center'>
                <h1 className='text-sm md:text-lg lg:text-xl font-semibold mb-12 text-center'>CONHEÇA OS NOSSOS ESTILOS, E LIBERTE A ESSÊNCIA QUE HÁ EM TI</h1>
-              <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-14 md:gap-2 lg:gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 md:gap-2 lg:gap-6">
                 {BestData.map((item, index) =>(
                   <BestProdCard
                   key={index}

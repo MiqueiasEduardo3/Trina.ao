@@ -1,4 +1,3 @@
-
 const DestaquesDataCard = ({img,}) => {
     return (
     <div className="transition-all  flex flex-col items-center justify-center duration-500  dark:text-white">

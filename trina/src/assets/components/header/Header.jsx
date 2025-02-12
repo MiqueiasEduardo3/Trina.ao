@@ -4,7 +4,8 @@ import fogo from '../../../img/icones/fogo.png';
 import praia1 from '../../../img/icones/praia1.png';
 import relogio from '../../../img/icones/relogio.png';
 import { useEffect, useState } from 'react';
-import { faAngleDown, faUserAlt, faShoppingBag, faLongArrowAltLeft, faShoppingCart, faUserLarge } from '@fortawesome/free-solid-svg-icons';
+import { faAngleDown, faUserAlt, faLongArrowAltLeft, faUserLarge } from '@fortawesome/free-solid-svg-icons';
+import { faShoppingCart } from '@fortawesome/free-regular-svg-icons';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import { HiMenuAlt3, HiMenuAlt1 } from "react-icons/hi";
 import UserDataLogin from './UserDataLogin';
@@ -15,7 +16,6 @@ import { useNavigate } from 'react-router-dom';
   const UserData = [
   { imgUser: calcaYour,
     nameUser: "Miquéias Eduardo",
-    typeUser: "Usuário cliente",
   },
   ];
 
@@ -71,7 +71,7 @@ import { useNavigate } from 'react-router-dom';
 
           <div className="flex items-center gap-4 lg:hidden">
             <div className="relative">
-              <a className="nav-icons" href="/shop"> <FontAwesomeIcon icon={faShoppingBag} /></a>
+              <a className="nav-icons" href="/shop"> <FontAwesomeIcon icon={faShoppingCart} /></a>
               <div className="nav-icons-bar absolute rounded-full shadow-md bg-red-900 min-h-5 min-w-5 top-5
                left-2 text-xs flex items-center text-white cursor-pointer font-semibold">{itemCount}</div>
             </div>
@@ -174,7 +174,7 @@ import { useNavigate } from 'react-router-dom';
           <div className="hidden lg:flex items-center gap-5">
             
             <div className="relative">
-              <a className="nav-icons" href="/shop"> <FontAwesomeIcon icon={faShoppingBag} /></a>
+              <a className="nav-icons" href="/shop"> <FontAwesomeIcon icon={faShoppingCart}  /></a>
               <div className="nav-icons-bar absolute rounded-full shadow-md bg-red-900 min-h-5 min-w-5 top-5
                left-2 text-xs flex items-center text-white cursor-pointer font-semibold">{itemCount}</div>
             </div>
@@ -203,29 +203,28 @@ import { useNavigate } from 'react-router-dom';
       {menuOpen && (
           <div
           className={`${menuOpen? "left-0" : "-left-[100%]"} fixed bottom-0 top-0 z-20 flex h-screen
-            w-[75%] sm:w-[50%]  flex-col justify-between bg-red-50 dark:bg-gray-900 dark:text-white px-8 pb-6 pt-16
+            w-[75%] sm:w-[50%]  flex-col justify-between bg-zinc-200
+             dark:bg-gray-900 dark:text-white px-8 pb-6 pt-16
             transition-all duration-300 ease-in-out transform lg:hidden rounded-r-xl shadow-md`}>
 
-            <div className="card w-56 mr-10 sm:w-64 sm:mr-20 bg-blue-700">
+            <div className="card w-60 mr-10 sm:w-64 sm:mr-20">
                  {UserData.map((item, index) =>(
                   <UserDataLogin
                   key={index}
                   {...item} 
                   />
                 ))}
-              <nav className="l-6 flex w-40 md:w-64 lg:w-56 flex-col space-y-4 items-center gap-5 mt-12">
-                <a className="mr-24 text-xl md:mr-44 md:text-2xl  cursor-pointer" href="/" onClick={() => setMenuOpen(false)}>Home</a>
-                <a className="mr-28 ml-2 text-xl md:mr-48 md:text-2xl  cursor-pointer" href="/#" onClick={() => setMenuOpen(false)} >Shop</a>
-                <a className="mr-14 text-xl md:mr-32 md:text-2xl cursor-pointer" href="/#" onClick={() => setMenuOpen(false)}>Sobre nós</a>
-                <a className="mr-7 text-xl sm:mr-20 sm:text-2xl cursor-pointer" href="/#" onClick={() => setMenuOpen(false)}>Contacte-nos</a>
+              <nav className="l-6 flex w-44 md:w-64 lg:w-56 flex-col space-y-4 items-center gap-2 mt-12">
+                <a className="mr-24 text-xl md:mr-44 md:text-2xl font-semibold cursor-pointer text-red-900" href="/" onClick={() => setMenuOpen(false)}>Home</a>
+                <a className="mr-28 ml-2 text-xl md:mr-48 md:text-2xl font-semibold cursor-pointer text-red-900" href="/#" onClick={() => setMenuOpen(false)} >Shop</a>
+                <a className="mr-20 text-xl md:mr-44 md:text-2xl font-semibold cursor-pointer text-red-900" href="/#" onClick={() => setMenuOpen(false)}>Ofertas</a>
+                <a className="mr-14 text-xl md:mr-32 md:text-2xl font-semibold cursor-pointer text-red-900" href="/#" onClick={() => setMenuOpen(false)}>Sobre nós</a>
+                <a className="mr-4 text-xl sm:mr-20 sm:text-2xl font-semibold cursor-pointer text-red-900" href="/#" onClick={() => setMenuOpen(false)}>Contacte-nos</a>
+                <a className="mr-8 text-xl sm:mr-20 sm:text-2xl font-semibold cursor-pointer text-red-900" href="/#" onClick={() => setMenuOpen(false)}>#novidades</a>
+                <a className="mr-14 text-xl sm:mr-20 sm:text-2xl font-semibold cursor-pointer text-red-900" href="/#" onClick={() => setMenuOpen(false)}>Meu perfíl</a>
               </nav>
           </div>
-            <div className=" w-64">
-            <h1 className='gap-4'>
-              Made with ❤ by <a className='cursor-pointer underline' href="https://dilshad-ahmed.github.io/">3Z Corporation</a>
-            </h1>
-          </div>
-          </div>
+        </div>
       )}
     </>
   );
