@@ -207,7 +207,7 @@ import { useNavigate } from 'react-router-dom';
              dark:bg-gray-900 dark:text-white px-8 pb-6 pt-16
             transition-all duration-300 ease-in-out transform lg:hidden rounded-r-xl shadow-md`}>
 
-            <div className="card w-60 mr-10 sm:w-64 sm:mr-20">
+            <div className="card  w-60 mr-10 sm:w-64 sm:mr-20">
                  {UserData.map((item, index) =>(
                   <UserDataLogin
                   key={index}
