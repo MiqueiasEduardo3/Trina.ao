@@ -175,8 +175,8 @@ import { useNavigate } from 'react-router-dom';
             
             <div className="relative">
               <a className="nav-icons" href="/shop"> <FontAwesomeIcon icon={faShoppingCart}  /></a>
-              <div className="nav-icons-bar absolute rounded-full shadow-md bg-red-900 min-h-5 min-w-5 top-5
-               left-2 text-xs flex items-center text-white cursor-pointer font-semibold">{itemCount}</div>
+              <div className="nav-icons-bar absolute rounded-full shadow-md bg-red-900 min-h-5 min-w-5 bottom-5
+               left-3 text-xs flex items-center text-white cursor-pointer font-semibold">{itemCount}</div>
             </div>
             <a className="nav-icons" href="/shop"><FontAwesomeIcon icon={faHeart} /> </a>
 
