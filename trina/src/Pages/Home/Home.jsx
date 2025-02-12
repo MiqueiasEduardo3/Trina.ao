@@ -1,5 +1,4 @@
-import './Home.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import './Home.css';
 import Footer from '../../assets/components/footer/footer';
 import Header from '../../assets/components/header/Header';
 import HomeBack from '../../assets/components/homeBack/HomeBack';
