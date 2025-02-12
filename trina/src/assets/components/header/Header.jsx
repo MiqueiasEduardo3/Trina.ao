@@ -5,7 +5,7 @@ import praia1 from '../../../img/icones/praia1.png';
 import relogio from '../../../img/icones/relogio.png';
 import { useEffect, useState } from 'react';
 import { faAngleDown, faUserAlt, faLongArrowAltLeft, faUserLarge } from '@fortawesome/free-solid-svg-icons';
-import { faShoppingCart } from '@fortawesome/free-regular-svg-icons';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import { HiMenuAlt3, HiMenuAlt1 } from "react-icons/hi";
 import UserDataLogin from './UserDataLogin';
