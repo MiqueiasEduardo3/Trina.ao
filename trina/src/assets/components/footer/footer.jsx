@@ -12,9 +12,9 @@ const Footer = () =>{
         <>
         <section className='footer w-full h-max justify-center flex items-center  bg-zinc-300 '>
             <div className="w-11/12 items-center flex-col justify-center">
-                <div className="w-full grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 h-[45vh] md:h-[25vh] lg:h-[45vh] p-12">
+                <div className="w-full grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 h-[45vh] md:h-[25vh] lg:h-[35vh] p-12">
                     
-                    <ul className='h-fullmt-4 mb-14 sm:mb-0 text-center text-black'>
+                    <ul className='h-full mb-14 sm:mb-0 text-center text-black'>
                         <li className="font-bold mb-2 text-sm ">Políticas de uso</li>
                         <li className='text-sm md:text-xs lg:text-sm cursor-pointer'>Políticas de privacidade</li>
                         <li className='text-sm md:text-xs lg:text-sm cursor-pointer'>Políticas de cancelamento</li>
@@ -52,9 +52,9 @@ const Footer = () =>{
                     </ul>
                 </div>
                 
-                <div className="w-full h-[20vh] md:h-[6vh] lg:h-[10vh] mt-[435px] md:mt-0 lg:mt-0 flex-col items-center justify-center gap-4">
-                    <h1 className='my-6 text-center font-bold text-sm'>Pagamentos seguros</h1>
-                    <div className=" ml-12 grid grid-cols-3 sm:grid-cols-6 gap-3">
+                <div className="w-full h-[20vh] md:h-[6vh] lg:h-[20vh] mt-[435px] md:mt-0 lg:mt-0 flex-col items-center justify-center gap-4">
+                    <h1 className='my-8 text-center font-bold text-sm'>Pagamentos seguros</h1>
+                    <div className=" ml-12 grid grid-cols-3 sm:grid-cols-11 sm:ml-96 gap-3">
                         <img src={wise}  alt="No image" className="h-[30px] w-[50px] md:h-[35px] md:w-[65px] lg:h-[40px] lg:w-[80px] rounded-sm"/>
                         <img src={paypal}  alt="No image" className="h-[30px] w-[50px] md:h-[35px] md:w-[65px] lg:h-[40px] lg:w-[80px]  rounded-sm"/>
                         <img src={visa}  alt="No image" className="h-[30px] w-[50px] md:h-[35px] md:w-[65px] lg:h-[40px] lg:w-[80px]  rounded-sm"/>
