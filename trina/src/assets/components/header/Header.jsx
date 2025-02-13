@@ -200,32 +200,39 @@ import { useNavigate } from 'react-router-dom';
       </header>
 
 
-      {menuOpen && (
+            {menuOpen && (
           <div
-          className={`${menuOpen? "left-0" : "-left-[100%]"} fixed bottom-0 top-0 z-20 flex h-screen
-            w-[75%] sm:w-[50%]  flex-col justify-between bg-zinc-200
-             dark:bg-gray-900 dark:text-white px-8 pb-6 pt-16
-            transition-all duration-300 ease-in-out transform lg:hidden rounded-r-xl shadow-md`}>
+            className={`${
+              menuOpen ? "left-0" : "-left-[100%]"
+            } fixed bottom-0 top-0 z-20 flex h-screen w-[75%] sm:w-[50%] flex-col justify-between 
+            bg-zinc-200 dark:bg-gray-900 dark:text-white px-8 pb-6 pt-16
+            transition-all duration-700 ease-in-out transform lg:hidden rounded-r-xl shadow-md`}>
 
-            <div className="card  w-60 mr-10 sm:w-64 sm:mr-20">
-                 {UserData.map((item, index) =>(
-                  <UserDataLogin
-                  key={index}
-                  {...item} 
-                  />
-                ))}
+            {/* Botão "X" para fechar o menu */}
+            <span 
+              className="absolute top-4 right-4 text-red-900  px-3 py-2 
+              rounded-full cursor-pointer transition-all duration-300 text-2xl"
+              onClick={toggleMenu}
+            >
+              ✖
+            </span>
+
+            <div className="card w-60 mr-10 sm:w-64 sm:mr-20">
+              {UserData.map((item, index) => (
+                <UserDataLogin key={index} {...item} />
+              ))}
               <nav className="l-6 flex w-44 md:w-64 lg:w-56 flex-col space-y-4 items-center gap-2 mt-12">
                 <a className="mr-24 text-xl md:mr-44 md:text-2xl font-semibold cursor-pointer text-red-900" href="/" onClick={() => setMenuOpen(false)}>Home</a>
-                <a className="mr-28 ml-2 text-xl md:mr-48 md:text-2xl font-semibold cursor-pointer text-red-900" href="/#" onClick={() => setMenuOpen(false)} >Shop</a>
+                <a className="mr-28 ml-2 text-xl md:mr-48 md:text-2xl font-semibold cursor-pointer text-red-900" href="/#" onClick={() => setMenuOpen(false)}>Shop</a>
                 <a className="mr-20 text-xl md:mr-44 md:text-2xl font-semibold cursor-pointer text-red-900" href="/#" onClick={() => setMenuOpen(false)}>Ofertas</a>
                 <a className="mr-14 text-xl md:mr-32 md:text-2xl font-semibold cursor-pointer text-red-900" href="/#" onClick={() => setMenuOpen(false)}>Sobre nós</a>
                 <a className="mr-4 text-xl sm:mr-20 sm:text-2xl font-semibold cursor-pointer text-red-900" href="/#" onClick={() => setMenuOpen(false)}>Contacte-nos</a>
                 <a className="mr-8 text-xl sm:mr-20 sm:text-2xl font-semibold cursor-pointer text-red-900" href="/#" onClick={() => setMenuOpen(false)}>#novidades</a>
                 <a className="mr-14 text-xl sm:mr-20 sm:text-2xl font-semibold cursor-pointer text-red-900" href="/#" onClick={() => setMenuOpen(false)}>Meu perfíl</a>
               </nav>
+            </div>
           </div>
-        </div>
-      )}
+        )}
     </>
   );
 };

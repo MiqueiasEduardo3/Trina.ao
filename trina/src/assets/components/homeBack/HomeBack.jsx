@@ -5,52 +5,58 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
-
-// Importação correta das imagens
-import hero5 from "./../../../img/hero5.png";
+import hero from "./../../../img/hero.png";
 import hero3 from "./../../../img/hero3.png";
-import bg from "./../../../img/bg.jpg";
+import size4 from "./../../../img/size4.png";
 
 const HomeBack = () => {
   const slides = [
     { id: 1, image: hero3 },
-    { id: 2, image: hero5 },
-    { id: 3, image: bg },
-    { id: 2, image: hero5 },
+    { id: 2, image: hero },
   ];
 
   return (
-    <div className="w-full h-[500px] lg:h-[700px] mt-[80px] relative">
-     <Swiper
-      modules={[Navigation, Pagination, Autoplay, EffectFade]}
-      effect="fade"
-      loop={true} // Garante que o loop funcione corretamente
-      autoplay={{ delay: 2500, disableOnInteraction: false }}
-      speed={700}
-      navigation={true}
-      pagination={{ clickable: true }}
-      className="h-full w-full"
-      onSwiper={(swiper) => swiper.slideTo(0)} // Garante que o primeiro slide seja carregado corretamente
-      >
-      {slides.map((slide, index) => (
-  <SwiperSlide key={slide.id}>
-    <div
-      className="w-full h-full bg-cover bg-center transition-opacity duration-700 ease-in-out opacity-100"
-      style={{
-        backgroundImage: `url(${slide.image})`,
-        filter: "brightness(95%)",
-      }}
-    />
-  </SwiperSlide>
-))}
-
-      </Swiper>
+    <div className="w-full h-[600px] lg:h-[570px] mt-[80px] relative">
+      {/* Verifica se a tela é menor que md (dispositivo móvel) */}
+      <div className="block md:hidden w-full h-full bg-cover bg-center"
+        style={{
+          backgroundImage: `url(${size4})`,
+          filter: "brightness(90%)",
+        }}>
+      </div>
+      
+      {/* Exibe o Swiper apenas em telas maiores que md */}
+      <div className="hidden md:block h-full w-full">
+        <Swiper
+          modules={[Navigation, Pagination, Autoplay, EffectFade]}
+          effect="fade"
+          loop={true}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          speed={900}
+          navigation={true}
+          pagination={{ clickable: true }}
+          className="h-full w-full"
+          onSwiper={(swiper) => swiper.slideTo(0)}
+        >
+          {slides.map((slide) => (
+            <SwiperSlide key={slide.id}>
+              <div
+                className="w-full h-full bg-cover bg-center transition-opacity duration-800 ease-in-out opacity-100"
+                style={{
+                  backgroundImage: `url(${slide.image})`,
+                  filter: "brightness(95%)",
+                }}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
 
       {/* Estilizando as setas de navegação */}
       <style>
         {`
           .swiper-button-prev, .swiper-button-next {
-            color: rgba(255, 255, 255, 0.8);
+            color: rgba(255, 255, 255, 0.9);
             transition: color 0.3s ease-in-out, transform 0.2s;
             transform: scale(1);
           }
@@ -59,7 +65,7 @@ const HomeBack = () => {
             transform: scale(1.1);
           }
           .swiper-pagination-bullet {
-            background: rgba(255, 255, 255, 0.7);
+            background: rgba(255, 255, 255, 0.8);
             width: 10px;
             height: 10px;
             opacity: 0.7;
