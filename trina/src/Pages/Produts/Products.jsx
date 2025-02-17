@@ -83,7 +83,7 @@ const Products = () => {
 
 
                 <div className="w-full bg-yellow-400 ml-2 md:ml-5 lg:ml-5 p-4 items-center h-full justify-center flex-col rounded-sm">
-                    <h1 className="text-3xl -ml-2 font-bold">{nomeProduto}</h1>
+                    <h1 className="text-3xl -ml-1 font-bold">{nomeProduto}</h1>
 
                     <div className="w-full mt-5">
                      <p className="text-sm">{detalhesProduto2}</p>
