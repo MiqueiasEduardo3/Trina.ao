@@ -95,7 +95,7 @@ const Products = () => {
                         </span>
 
                         <h1 className="text-lg font-bold">Cores : 
-                        <div className="w-2/5 flex gap-2 ml-12 md:-ml-12 lg:ml-10 -mt-6">
+                        <div className="w-2/5 flex gap-2 ml-12 md:-ml-12 lg:ml-1 -mt-6">
                             {colors.map((color) => (
                                 <button
                                 key={color.name}
@@ -114,11 +114,11 @@ const Products = () => {
                         </h1>
                     </div>
 
-                    <div className="mt-10 ml-7">
+                    <div className="mt-10 ml-1 bg-red-700">
                         <h1 className="text-lg line-through text-red-900 font-bold">{precoAnterior}Akz</h1>
-                        <div className="flex items-center justify-between mb-4 w-4/6 md:w-2/6 lg:w-2/6">
+                        <div className="flex items-center justify-between mb-4 w-4/6 md:w-2/6 lg:w-2/6 bg-green-600">
                             <h1 className="text-2xl font-bold">{precoActual}Akz</h1>
-                            <span className="text-sm bg-yellow-400 mr-7 md:mr-5 lg:mr-5 px-1 rounded-sm">{percentagem} %</span>
+                            <span className="text-sm bg-yellow-400 mr-7 md:mr-5 lg:mr-1 px-1 rounded-sm">{percentagem} %</span>
                         </div>
 
                 
