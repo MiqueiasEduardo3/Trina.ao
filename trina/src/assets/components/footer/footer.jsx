@@ -12,7 +12,7 @@ const Footer = () =>{
         <>
         <section className='footer w-full h-max justify-center flex items-center  bg-zinc-300 '>
             <div className="w-11/12 items-center flex-col justify-center">
-                <div className="w-full grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 h-[45vh] md:h-[25vh] lg:h-[35vh] p-12">
+                <div className="w-full grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 h-[45vh] mt-5 md:h-[25vh] lg:h-[35vh] p-12">
                     
                     <ul className='h-full mb-14 sm:mb-0 text-center text-black'>
                         <li className="font-bold mb-2 text-sm ">Políticas de uso</li>
