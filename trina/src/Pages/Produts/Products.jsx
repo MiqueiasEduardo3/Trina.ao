@@ -198,8 +198,9 @@ const Products = () => {
                             </button>
                     </div>
                 </div>    
+            </div>
 
-                 <section className="w-full mt-20 mb-20">
+            <section className="w-full mt-20 mb-20">
                     <h1 className="font-semibold text-black text-xl text-center md:text-sm lg:text-2xl">Também podes comprar</h1>
                     <section className="flex items-center justify-center my-6">   
                         <div className=" w-[330px] md:w-11/12 lg:w-11/12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-14 md:gap-8 lg:gap-4">
@@ -227,7 +228,6 @@ const Products = () => {
                     </div>
                 )} 
 
-            </div>
          <Footer />
         </>
     );
