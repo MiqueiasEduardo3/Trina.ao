@@ -175,8 +175,28 @@ const Products = () => {
                             </div>
                         </div>
 
+                        {/* Quantidade */}
+                        <div className="mt-6">
+                            <span className="text-sm font-semibold">Quantidade</span>
+                            <div className="flex items-center mt-2">
+                                <button className="px-3 bg-black text-white rounded-sm"
+                                    onClick={() => setProductCount(prev => Math.max(1, prev - 1))}>-</button>
+                                <span className="px-4">{productCount}</span>
+                                <button className="px-3 bg-black text-white rounded-sm"
+                                    onClick={() => setProductCount(prev => prev + 1)}>+</button>
+                            </div>
+                        </div>
 
-                    </div>
+                        {/* Preços e botão */}
+                        <h1 className="text-lg line-through text-red-900 font-bold">{precoAnterior} Akz</h1>
+                        <h1 className="text-2xl font-bold">{precoActual} Akz</h1>
+                            <button
+                                onClick={handleCart}
+                                className="mt-4 py-2 px-4 bg-black
+                                text-white rounded-sm">
+                                Adicionar ao carrinho
+                            </button>
+                      </div>
 
 
 
