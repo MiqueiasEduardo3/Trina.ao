@@ -133,23 +133,29 @@ const Products = () => {
                          </div>
                     </div>
 
-                      {/* Seção de detalhes do produto */}
-                      <div className="w-full ml-2 md:ml-5 lg:ml-5 p-4">
-                        <h1 className="text-3xl font-semibold">{nomeProduto}</h1>
-                             <span className="text-sm font-bold">Referência: 
-                                <span className="text-sm font-normal ml-2">
-                                 3336HSAUJ7
-                                </span></span>
+                  
+                    <div className="w-full ml-2 md:ml-5 lg:ml-5 p-4">
+                         {/* Seção de detalhes do produto */}
+                        <h1 className="text-3xl font-semibold">
+                            {nomeProduto}
+                        </h1>
+                        <span className="text-sm font-bold">Referência: 
+                            <span className="text-sm font-normal ml-2">
+                                3336HSAUJ7
+                            </span>
+                        </span>
 
-                            <p className="text-xs mt-5 text-justify">{detalhesProduto2}</p>
+                        <p className="text-xs mt-5 text-justify">{detalhesProduto2}</p>
+                        <div className="mt-10">
+                            <span className="text-xs font-semibold">
+                                <FontAwesomeIcon className="mr-1" icon={faAngleRight} />
+                                Recomendamos seu tamanho habitual
+                            </span>
+                        </div>
 
-                            <div className="mt-10">
-                                <span className="text-xs font-semibold">
-                                    <FontAwesomeIcon className="mr-1" icon={faAngleRight} />
-                                    Recomendamos seu tamanho habitual
-                                </span>
-                            </div>
-                      </div>
+
+
+                    </div>
 
 
 
