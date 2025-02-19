@@ -176,8 +176,8 @@ const Products = () => {
                         </div>
 
                         {/* Quantidade */}
-                        <div className="mt-6">
-                            <span className="text-sm font-semibold">Quantidade</span>
+                        <div className="mt-6 bg-yellow-400 mb-6 w-[23%]">
+                            <span className="text-sm  font-semibold">Quantidade</span>
                             <div className="flex items-center mt-2">
                                 <button className="px-3 bg-black text-white rounded-sm"
                                     onClick={() => setProductCount(prev => Math.max(1, prev - 1))}>-</button>
@@ -189,7 +189,13 @@ const Products = () => {
 
                         {/* Preços e botão */}
                         <h1 className="text-lg line-through text-red-900 font-bold">{precoAnterior} Akz</h1>
-                        <h1 className="text-2xl font-bold">{precoActual} Akz</h1>
+                        <div className="flex items-center justify-between mb-6 w-[68%] md:w-[45%] lg:w-[45%]">
+                            <h1 className="text-2xl font-bold">{precoActual}Akz</h1>
+                            <span className="text-sm bg-yellow-400
+                              mr-4 md:mr-5lg:mr-4 px-1 rounded-sm">
+                            {percentagem} %
+                            </span>
+                        </div>
                             <button
                                 onClick={handleCart}
                                 className="mt-4 py-2 px-4 bg-black
