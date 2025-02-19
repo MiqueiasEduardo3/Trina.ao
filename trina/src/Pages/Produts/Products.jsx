@@ -212,6 +212,21 @@ const Products = () => {
                         </div>
                     </section>
                  </section>
+
+                 
+                 {/* Secção para expandir as imagens do produto */}
+                 {isExpanded && (
+                    <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-80 z-50" onClick={() => setIsExpanded(false)}>
+                        <button onClick={prevImage} className="absolute left-10 text-white text-4xl"> <FaChevronLeft /> </button>
+                        <img 
+                            src={galleryImages[selectedImageIndex]} 
+                            alt="Produto Expandido" 
+                            className="max-w-[90%] max-h-[90%] object-cover rounded-lg shadow-lg"
+                        />
+                        <button onClick={nextImage} className="absolute right-10 text-white text-4xl"> <FaChevronRight /> </button>
+                    </div>
+                )} 
+
             </div>
          <Footer />
         </>
