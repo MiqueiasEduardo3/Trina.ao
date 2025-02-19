@@ -102,7 +102,7 @@ const Products = () => {
 
             <div className="flex items-center mt-28 mb-10 h-5/6 p-2">
                 <div className="w-[94%] grid grid-cols-1 md:grid-cols-2
-                 lg:grid-cols-[60%_40%] gap-14 md:gap-8 lg:gap-2 p-2">
+                  lg:grid-cols-[60%_40%] gap-14 md:gap-8 lg:gap-2 p-2">
                                     
                      {/* Seção da imagem do produto */}
                     <div className="w-full h-full flex">
@@ -196,11 +196,22 @@ const Products = () => {
                                 text-white rounded-sm">
                                 Adicionar ao carrinho
                             </button>
-                      </div>
-
-
-
+                    </div>
                 </div>    
+
+                 <section className="w-full mt-20 mb-20">
+                    <h1 className="font-semibold text-black text-xl text-center md:text-sm lg:text-2xl">Também podes comprar</h1>
+                    <section className="flex items-center justify-center my-6">   
+                        <div className=" w-[330px] md:w-11/12 lg:w-11/12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-14 md:gap-8 lg:gap-4">
+                            {OtherData.map((item, index) =>(
+                            <OtherProductsData 
+                            key={index}
+                            {...item} 
+                            />
+                            ))}
+                        </div>
+                    </section>
+                 </section>
             </div>
          <Footer />
         </>
