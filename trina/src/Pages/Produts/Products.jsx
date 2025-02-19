@@ -153,6 +153,27 @@ const Products = () => {
                             </span>
                         </div>
 
+                        {/* Seleção de Cores */}
+                        <div className="">
+                            <h1 className="text-sm font-semibold ml--1 mt-6">
+                            Cores</h1> 
+                            <div className="mt-2 gap-1 w-[50%] md:w-[34%] lg:w-[34%] flex -ml-1 mb-6">
+                                {colors.map((color) => (
+                                    <button
+                                        key={color.name}
+                                        onClick={() => setSelectedColor(color.name)}
+                                        aria-label={`Cor ${color.name}`}
+                                        className={`w-6 h-6 rounded-full float-left ml-1 flex justify-center items-center 
+                                            ${selectedColor === color.name ? "border-2 border-black" : "border-2 border-transparent"}`}
+                                        style={{ backgroundColor: color.colorCode }}
+                                    >
+                                        {selectedColor === color.name && (
+                                            <span className="text-white text-xs font-normal">✔</span>
+                                        )}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
 
 
                     </div>
