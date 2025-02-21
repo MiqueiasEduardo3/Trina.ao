@@ -105,36 +105,35 @@ const Products = () => {
                   lg:grid-cols-[60%_40%] gap-14 md:gap-8 lg:gap-2 p-2">
                                     
                     {/* Seção da imagem do produto */}
-{/* Seção da imagem do produto */}
-<div className="w-full h-full flex flex-row items-start">
-    {/* Miniaturas - Sempre na vertical e ao lado */}
-    <div className="flex flex-col gap-2 h-full max-h-[500px] w-20 sm:w-24 md:w-28 lg:w-32 p-2">
-        {galleryImages.map((image, index) => (
-            <img
-                key={index}
-                src={image}
-                alt={`Thumbnail ${index + 1}`}
-                className={`w-full h-auto object-cover cursor-pointer rounded-md border-2 
-                ${selectedImageIndex === index ? "border-blue-500" : "border-gray-300"}`}
-                onClick={() => setSelectedImageIndex(index)}
-            />
-        ))}
-    </div>
+                    <div className="w-full h-full flex flex-row items-start">
+                        {/* Miniaturas - Sempre na vertical e ao lado */}
+                        <div className="flex flex-col gap-2 h-full max-h-[500px] w-20 sm:w-24 md:w-28 lg:w-32 p-2">
+                            {galleryImages.map((image, index) => (
+                                <img
+                                    key={index}
+                                    src={image}
+                                    alt={`Thumbnail ${index + 1}`}
+                                    className={`w-full h-auto object-cover cursor-pointer rounded-md border-2 
+                                    ${selectedImageIndex === index ? "border-blue-500" : "border-gray-300"}`}
+                                    onClick={() => setSelectedImageIndex(index)}
+                                />
+                            ))}
+                        </div>
 
-    {/* Imagem Principal - Com mesma altura das miniaturas */}
-    <div className="relative flex-1 flex items-center justify-center h-full max-h-[500px]">
-        <img 
-            src={galleryImages[selectedImageIndex]} 
-            alt="Produto" 
-            className="w-full max-w-[320px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[570px] 
-            h-full object-cover rounded-lg shadow-lg"
-        />
-        <button className="absolute top-2 left-1 ml-6 bg-white p-2 rounded-full shadow" 
-             onClick={() => setIsExpanded(true)}>
-             <FaExpand className="text-gray-700" />
-        </button>
-    </div>
-</div>
+                        {/* Imagem Principal - Com mesma altura das miniaturas */}
+                        <div className="relative flex-1 flex items-center justify-center h-full max-h-[500px]">
+                            <img 
+                                src={galleryImages[selectedImageIndex]} 
+                                alt="Produto" 
+                                className="w-full max-w-[320px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[570px] 
+                                h-full object-cover rounded-lg shadow-lg"
+                            />
+                            <button className="absolute top-2 left-1 ml-6 bg-white p-2 rounded-full shadow" 
+                                onClick={() => setIsExpanded(true)}>
+                                <FaExpand className="text-gray-700" />
+                            </button>
+                        </div>
+                    </div>
 
 
 
