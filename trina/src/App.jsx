@@ -6,7 +6,7 @@ import Home from './Pages/Home/Home'
 import { useEffect } from 'react';
 import Cart from './Pages/Cart/Cart';
 import Shop from './Pages/Shop/Shop';
-import Products from './Pages/Produts/Products';
+import Products from "./Pages/Products/Products";
 import Login from './Pages/Login/Login';
 import Register from './Pages/Login/Register';
 
