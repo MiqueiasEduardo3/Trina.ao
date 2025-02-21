@@ -1,4 +1,3 @@
-import './Footer.css'
 import wise from '../../../img/wise.png';
 import paypal from '../../../img/paypal.png';
 import paypay from '../../../img/paypay.jpeg';
