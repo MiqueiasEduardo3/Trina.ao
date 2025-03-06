@@ -9,6 +9,7 @@ const PromoDataCard = ({ img, nomeProduto, percentagem, detalhesProduto1, detalh
     navigate("/products", {
       state: { img, nomeProduto, percentagem, detalhesProduto2, tamanhos, precoAnterior, precoActual },
     });
+    window.scrollTo(0, 0);
   };
 
   return (

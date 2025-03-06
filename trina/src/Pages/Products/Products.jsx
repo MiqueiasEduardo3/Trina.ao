@@ -107,7 +107,7 @@ const Products = () => {
                     {/* Seção da imagem do produto */}
                     <div className="w-full h-full flex flex-row items-start">
                         {/* Miniaturas - Sempre na vertical e ao lado */}
-                        <div className="flex flex-col gap-2 h-full max-h-[500px] w-20 sm:w-24 md:w-28 lg:w-32 p-2">
+                        <div className="flex flex-col gap-2 h-full max-h-[526px] w-20 sm:w-24 md:w-28 lg:w-[133px] p-2">
                             {galleryImages.map((image, index) => (
                                 <img
                                     key={index}
@@ -121,7 +121,7 @@ const Products = () => {
                         </div>
 
                         {/* Imagem Principal - Com mesma altura das miniaturas */}
-                        <div className="relative flex-1 flex items-center justify-center h-full max-h-[500px]">
+                        <div className="relative flex-1 flex items-center justify-center h-full max-h-[524px]">
                             <img 
                                 src={galleryImages[selectedImageIndex]} 
                                 alt="Produto" 
@@ -136,9 +136,10 @@ const Products = () => {
                     </div>
 
 
-
+                            
                   
-                    <div className="w-full ml-2 md:ml-5 lg:ml-5 p-4">
+                    <div className="w-full -mt-5 ml-2 md:ml-5 lg:ml-5 p-4">
+                        
                          {/* Seção de detalhes do produto */}
                         <h1 className="text-3xl font-semibold">
                             {nomeProduto}
@@ -149,21 +150,22 @@ const Products = () => {
                             </span>
                         </span>
 
-                        <p className="text-xs mt-5 text-justify">{detalhesProduto2}</p>
-                        <div className="mt-10">
+                        <p className="text-xs mt-3 text-justify">{detalhesProduto2}</p>
+                        <div className="mt-5">
                             <span className="text-xs font-semibold">
-                                <FontAwesomeIcon className="mr-1" icon={faAngleRight} />
+                                <FontAwesomeIcon className="mr-1 " icon={faAngleRight} />
                                 Recomendamos seu tamanho habitual
                             </span>
                         </div>
 
                          {/* Seleção de Tamanhos */}
-                        <div className="mt-3 w-[28%] flex flex-col">
+                        <div className="mt-1 w-[26%] flex flex-col">
                             <label className="font-semibold mr-12 text-sm">Tamanhos</label>
                             <select
                                 value={selectedOption}
                                 onChange={(e) => setSelectedOption(e.target.value)}
-                                className="px-4 py-1 mt-2 border text-sm rounded-sm bg-zinc-100 text-gray-800 outline-none"
+                                className="px-4 py-1 mt-2 border text-sm rounded-sm
+                                bg-zinc-100 text-gray-800 outline-none"
                             >
                                 <option value="" disabled>Selecione...</option>
                                 {options.map((option, index) => (
@@ -174,7 +176,7 @@ const Products = () => {
 
                         {/* Seleção de Cores */}
                         <div className="">
-                            <h1 className="text-sm font-semibold ml--1 mt-6">
+                            <h1 className="text-sm font-semibold ml--1 mt-4">
                             Cores</h1> 
                             <div className="mt-2 gap-1 w-[50%] md:w-[34%] lg:w-[34%] flex -ml-1 mb-6">
                                 {colors.map((color) => (
@@ -195,20 +197,20 @@ const Products = () => {
                         </div>
 
                         {/* Quantidade */}
-                        <div className="mt-6 bg-yellow-400 mb-6 w-[23%]">
-                            <span className="text-sm  font-semibold">Quantidade</span>
+                        <div className="mt-6 mb-6 w-[24%]">
+                            <span className="text-sm font-semibold">Quantidade</span>
                             <div className="flex items-center mt-2">
-                                <button className="px-3 bg-black text-white rounded-sm"
+                                <button className="px-4 bg-black text-white rounded-sm"
                                     onClick={() => setProductCount(prev => Math.max(1, prev - 1))}>-</button>
-                                <span className="px-4">{productCount}</span>
-                                <button className="px-3 bg-black text-white rounded-sm"
+                                <span className="px-3 w-[29%]">{productCount}</span>
+                                <button className="px-4 bg-black text-white rounded-sm"
                                     onClick={() => setProductCount(prev => prev + 1)}>+</button>
                             </div>
                         </div>
 
                         {/* Preços e botão */}
                         <h1 className="text-lg line-through text-red-900 font-bold">{precoAnterior} Akz</h1>
-                        <div className="flex items-center justify-between mb-6 w-[68%] md:w-[45%] lg:w-[45%]">
+                        <div className="flex items-center justify-between mb-4 w-[68%] md:w-[45%] lg:w-[45%]">
                             <h1 className="text-2xl font-bold">{precoActual}Akz</h1>
                             <span className="text-sm bg-yellow-400
                               mr-4 md:mr-5lg:mr-4 px-1 rounded-sm">
