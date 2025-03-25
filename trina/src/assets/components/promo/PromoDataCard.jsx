@@ -2,7 +2,8 @@ import { faHeart } from "@fortawesome/free-regular-svg-icons/faHeart";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router-dom";
 
-const PromoDataCard = ({ img, nomeProduto, percentagem, detalhesProduto1, detalhesProduto2, tamanhos, precoAnterior, precoActual }) => {
+const PromoDataCard = ({ img, nomeProduto, percentagem, detalhesProduto1, 
+  detalhesProduto2, tamanhos, precoAnterior, precoActual }) => {
   const navigate = useNavigate();
 
   const handleProducts = () => {
