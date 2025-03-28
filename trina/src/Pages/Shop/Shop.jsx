@@ -6,6 +6,7 @@ import calcaYour from '../../img/TRINA/calcaYour.jpg';
 import oculos_sol2 from '../../img/TRINA/oculos_sol2.jpg';
 import saltoAzalea from '../../img/TRINA/saltoAzalea.jpg';
 import ShopDataCard from '../../assets/components/shopCard/ShopDataCard';
+import { useState } from 'react';
 
 
 const ShopData = [
@@ -136,6 +137,11 @@ const ShopData = [
 
 
 const Shop = () => {
+
+   // Estado para armazenar o tamanho selecionado
+      const [selectedOption, setSelectedOption] = useState(""); 
+      const options = ["Mais antigo", "Mais recente", "Mais vendidos", "Menor preço", "Novos produtos"];
+
     return(
         <>
         <TopHeader />
@@ -144,56 +150,52 @@ const Shop = () => {
         <div className="flex justify-center mt-32">
             <div className="flex w-11/12 gap-2 mb-10 items-start">
                 <div className="list-shop">
-                    <h1 className='text-sm font-bold cursor-pointer '>Filtrar resultados por:</h1>
+                  <h1 className='text-sm font-bold cursor-pointer'>Filtrar resultados por:</h1>
 
-                  <div className='mb-3'>
-                    <h1 className='text-sm font-semibold'>Malhas</h1>
-                    <h1 className='text-sm cursor-pointer'><input type="checkbox" className='w-8' name="" id="" />Casacos</h1>
-                    <h1 className='text-sm cursor-pointer'><input type="checkbox" className='w-8' name="" id="" />Coletes</h1>
-                    <h1 className='text-sm cursor-pointer'><input type="checkbox" className='w-8' name="" id="" />Blazzers</h1>
+                  <div className='mt-5'>
+                    <h1 className='text-sm font-semibold mb-2'>Categorias</h1> 
+                    <h1 className='text-sm font-semibold cursor-pointer -ml-2'><input type="checkbox" className='w-8' name="" id="" />Malhas</h1>
+                    <h1 className='text-sm font-semibold cursor-pointer -ml-2'><input type="checkbox" className='w-8' name="" id="" />Calças</h1>
+                    <h1 className='text-sm font-semibold cursor-pointer -ml-2'><input type="checkbox" className='w-8' name="" id="" />Calçados</h1>
+                    <h1 className='text-sm font-semibold cursor-pointer -ml-2'><input type="checkbox" className='w-8' name="" id="" />Camisas e Blusas</h1>
+                    <h1 className='text-sm font-semibold cursor-pointer -ml-2'><input type="checkbox" className='w-8' name="" id="" />Saias</h1>
+                    <h1 className='text-sm font-semibold cursor-pointer -ml-2'><input type="checkbox" className='w-8' name="" id="" />Vestidos</h1>
+                    <h1 className='text-sm font-semibold cursor-pointer -ml-2'><input type="checkbox" className='w-8' name="" id="" />PRAIA</h1>
+                    <h1 className='text-sm font-semibold cursor-pointer -ml-2'><input type="checkbox" className='w-8' name="" id="" />Conjuntos e macacões</h1>
+                    <h1 className='text-sm font-semibold cursor-pointer -ml-2'><input type="checkbox" className='w-8' name="" id="" />Roupa desportiva</h1>
+                    <h1 className='text-sm font-semibold cursor-pointer -ml-2'><input type="checkbox" className='w-8' name="" id="" />Acessórios</h1>
                   </div>
 
-                  <div className='mb-3'>
-                    <h1 className='text-sm font-semibold'>Calças</h1>
-                    <h1 className='text-sm cursor-pointer'><input type="checkbox" className='w-8' name="" id="" />Calças de gangas</h1>
-                    <h1 className='text-sm cursor-pointer'><input type="checkbox" className='w-8' name="" id="" />Calções</h1>
-                    <h1 className='text-sm cursor-pointer'><input type="checkbox" className='w-8' name="" id="" />Bermudas</h1>
+                  <div className='mt-3'>
+                    <h1 className='text-sm font-semibold mb-2'>Tamanhos</h1>
+                      <div>
+                        <span className='text-sm font-semibold mr-4'><input type="checkbox" className='mr-1' name="" id="" />S</span>
+                        <span className='text-sm font-semibold mr-4'><input type="checkbox" className='mr-1' name="" id="" />X</span>
+                        <span className='text-sm font-semibold mr-4'><input type="checkbox" className='mr-1' name="" id="" />L</span>
+                        <span className='text-sm font-semibold mr-4'><input type="checkbox" className='mr-1' name="" id="" />X</span>
+                        <span className='text-sm font-semibold mr-4'><input type="checkbox" className='mr-1' name="" id="" />XL</span>
+                        <span className='text-sm font-semibold mr-4'><input type="checkbox" className='mr-1' name="" id="" />2XL</span>
+                      </div>
                   </div>
 
-                  <div className='mb-3'>
-                    <h1 className='text-sm font-semibold'>Calçados</h1>
-                    <h1 className='text-sm cursor-pointer'><input type="checkbox" className='w-8' name="" id="" />Ténis</h1>
-                    <h1 className='text-sm cursor-pointer'><input type="checkbox" className='w-8' name="" id="" />Chinelos</h1>
-                    <h1 className='text-sm cursor-pointer'><input type="checkbox" className='w-8' name="" id="" />Saltos</h1>
-                    <h1 className='text-sm cursor-pointer'><input type="checkbox" className='w-8' name="" id="" />Sapatília</h1>
+                  <div className='mt-3'>
+                      {/* Seleção de Tamanhos */}
+                      <div className="mt-1 w-[100%]flex-col">
+                            <label className="font-semibold mr-52 text-sm">Ordenar por</label>
+                            <select
+                                value={selectedOption}
+                                onChange={(e) => setSelectedOption(e.target.value)}
+                                className="order px-4 py-1 mt-2 text-sm rounded-sm
+                                bg-white text-gray-800 w-[100%] h-8"
+                            >
+                                <option value="" disabled>Selecione...</option>
+                                {options.map((option, index) => (
+                                    <option key={index} value={option}>{option}</option>
+                                ))}
+                            </select>
+                        </div>
                   </div>
-
-                  <div className='mb-3'>
-                    <h1 className='text-sm font-semibold'>Camisas e Blusas</h1>
-                    <h1 className='text-sm cursor-pointer'><input type="checkbox" className='w-8' name="" id="" />T-shirts</h1>
-                    <h1 className='text-sm cursor-pointer'><input type="checkbox" className='w-8' name="" id="" />Camisolas</h1>
-                    <h1 className='text-sm cursor-pointer'><input type="checkbox" className='w-8' name="" id="" />Blusas</h1>
-                  </div>
-
-                  <div className='mb-3'>
-                    <h1 className='text-sm font-semibold'>Saias</h1>
-                    <h1 className='text-sm cursor-pointer'><input type="checkbox" className='w-8' name="" id="" />Curtas</h1>
-                    <h1 className='text-sm cursor-pointer'><input type="checkbox" className='w-8' name="" id="" />Midi</h1>
-                    <h1 className='text-sm cursor-pointer'><input type="checkbox" className='w-8' name="" id="" />Comprido</h1>
-                  </div>
-
-                  <div className='mb-3'>
-                    <h1 className='text-sm font-semibold'>Vestidos</h1>
-                    <h1 className='text-sm cursor-pointer'><input type="checkbox" className='w-8' name="" id="" />Curtos</h1>
-                    <h1 className='text-sm cursor-pointer'><input type="checkbox" className='w-8' name="" id="" />Midi</h1>
-                    <h1 className='text-sm cursor-pointer'><input type="checkbox" className='w-8' name="" id="" />Compridos</h1>
-                  </div>
-
-                    <h1 className='text-sm font-bold cursor-pointer'><input type="checkbox" className='w-8' name="" id="" />PRAIA</h1>
-                    <h1 className='text-sm font-bold cursor-pointer'><input type="checkbox" className='w-8' name="" id="" />Conjuntos e macacões</h1>
-                    <h1 className='text-sm font-bold cursor-pointer'><input type="checkbox" className='w-8' name="" id="" />Roupa desportiva</h1>
-                    <h1 className='text-sm font-bold cursor-pointer'><input type="checkbox" className='w-8' name="" id="" />Acessórios</h1>
-                </div>
+            </div>
 
 
                 <div className="list-shop-result">

@@ -1,12 +1,12 @@
 .list-shop{
     flex: 1;
-    background-color:  rgba(128, 111, 151, 0.128);
+    background-color:  rgba(128, 111, 151, 0.099);
     padding: 10px;
     border-radius: 5px;
     border: solid rgba(173, 172, 172, 0.523) 1px;
     position: sticky;
-    top: 90px; /* Ajuste para altura real do Header + TopHeader */
-    height: max-content;
+    top: 110px; /* Ajuste para altura real do Header + TopHeader */
+    height: 77vh;
     align-self: flex-start; /* Ajuda quando está dentro de flex container */
 }
 
@@ -15,4 +15,8 @@
     padding: 10px;
     border: solid rgba(173, 172, 172, 0.523) 1px;
     border-radius: 5px;
+}
+
+.order{
+       border: solid rgba(173, 172, 172, 0.523) 1px;
 }
