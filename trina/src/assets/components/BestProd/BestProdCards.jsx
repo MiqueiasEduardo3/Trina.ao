@@ -32,9 +32,9 @@ const BestProdCard = ({
       </div>
 
       <div className="flex gap-2 md:gap-1 lg:gap-2 py-4">
-        <h1 className="line-clamp-1 font-extrabold text-xs md:text-xs lg:text-sm">{category}</h1>
-        <h1 className="line-clamp-1 text-xs md:text-xs lg:text-sm">a partir de</h1>
-        <h1 className="line-clamp-1 font-extrabold text-xs md:text-xs lg:text-sm">{price} Akz</h1>
+        <h1 className="line-clamp-1 font-extrabold text-xs md:text-xs lg:text-sm text-black">{category}</h1>
+        <h1 className="line-clamp-1 text-xs md:text-xs lg:text-sm text-black">a partir de</h1>
+        <h1 className="line-clamp-1 font-extrabold text-xs md:text-xs lg:text-sm text-black">{price} Akz</h1>
       </div>
        <span className="cursor-pointer py-2 px-7 md:py-2 mg:px-5 lg:py-2 lg:px-7 rounded-sm  text-xs
        md:text-xs lg:text-sm items-center justify-center flex bg-black text-white">

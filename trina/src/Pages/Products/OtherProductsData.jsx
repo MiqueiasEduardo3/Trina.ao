@@ -12,7 +12,7 @@ const OtherProductsData = ({ img, nomeProduto, percentagem, detalhesProduto, pre
   };
 
   return (
-    <div className="shadow-lg rounded-lg dark:bg-slate-950 dark:text-white bg-white cursor-pointer relative md:mb-2">
+    <div className="shadow-lg rounded-lg dark:text-white bg-white cursor-pointer relative md:mb-2">
       <FontAwesomeIcon
         className="bg-white text-neutral-900 p-3 rounded-3xl absolute top-5 right-4 transition duration-300 hover:bg-yellow-400 z-10"
         icon={faHeart}
@@ -34,17 +34,18 @@ const OtherProductsData = ({ img, nomeProduto, percentagem, detalhesProduto, pre
         </span>
       </div>
 
-      <div className="space-y-2 p-3">
-        <h1 className="line-clamp-1 font-bold text-sm">{nomeProduto}</h1>
-        <h1 className="line-clamp-1 text-xs">{detalhesProduto}</h1>
+      <div className="space-y-2 p-3 bg-white">
+        <h1 className="line-clamp-1 font-bold text-sm text-black">{nomeProduto}</h1>
+        <h1 className="line-clamp-1 text-xs text-black">{detalhesProduto}</h1>
         <div className="flex items-center justify-between border-t-2 py-3 mt-3">
           <div>
             <p className="text-xs line-through text-red-900 font-bold">{precoAnterior} Akz</p>
-            <p className="text-base font-bold">{precoActual} Akz</p>
+            <p className="text-base font-bold text-black">{precoActual} Akz</p>
           </div>
           <span
             onClick={handleProducts}
-            className="cursor-pointer py-2 px-7 md:py-2 mg:px-5 lg:py-2 lg:px-8 bg-black text-xs md:text-sm lg:text-sm text-white rounded-sm">
+            className="cursor-pointer py-2 px-7 md:py-2 mg:px-5 lg:py-2 lg:px-8
+             bg-black text-xs md:text-sm lg:text-sm text-white rounded-sm">
             Confira
           </span>
         </div>
